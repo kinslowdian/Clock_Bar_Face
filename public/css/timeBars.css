@@ -72,28 +72,34 @@ html, body
 .timeBarsH
 {
 	width: 24px;
-	height: 60%;
+	height: 100%;
 
 	position: absolute;
 	top: 0; bottom: 0; left: 0; right: 0;
 
 	margin: auto;
 
-	background: rgba(7, 42, 22, 0.3);
-
 	transform-origin: 50% 50%;
-	/* transform: rotate(45deg); */
 
 	transition: 1200ms ease-in-out;
+}
 
-	-webkit-filter: blur(4px);
-	filter: blur(4px);
+.timeBarsH .unitWrapper
+{
+	width: inherit;
+	height: 30%;
+
+	/* background: rgba(7, 42, 22, 0.3); */
+
+	position: absolute;
+	transform: translateY(70%);
+	/* left:0; top: 70%; right: 0; bottom: 0; */
 }
 
 .timeBarsM
 {
 	width: 24px;
-	height: 120%;
+	height: 100%;
 
 	position: absolute;
 	top: 0; bottom: 0; left: 0; right: 0;
@@ -101,7 +107,6 @@ html, body
 	margin: auto;
 
 	transform-origin: 50% 50%;
-	/* transform: rotate(45deg); */
 
 	transition: 600ms ease-in-out;
 }
@@ -117,10 +122,16 @@ html, body
 	left:0; top: 0; right: 0; bottom: 50%;
 }
 
-.timeBlur
+.timeBlur-min
 {
-	-webkit-filter: blur(4px);
-	filter: blur(4px);
+/* 	-webkit-filter: blur(2px);
+	filter: blur(2px); */
+}
+
+.timeBlur-max
+{
+/* 	-webkit-filter: blur(4px);
+	filter: blur(4px); */
 }
 
 .unitBar
@@ -131,7 +142,7 @@ html, body
 	position: absolute;
 	top: 0; bottom: 0;
 
-	transform-origin: 50% 50%;
+	transform-origin: 0% 100%;
 }
 
 .hourBar

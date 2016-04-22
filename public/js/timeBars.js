@@ -29,18 +29,18 @@ function time_init(event)
 	clock.handHour					=	document.querySelector("#display .timeBarsH");
 	clock.handMins					= document.querySelector("#display .timeBarsM");
 
-	clock.hour.gfxH 				= clock.handHour.querySelector(".hourBar");
-	clock.hour.gfxM 				= clock.handMins.querySelector(".hourBar");
+	clock.hour.gfxH 				= clock.handHour.querySelector(".unitWrapper .hourBar");
+	clock.hour.gfxM 				= clock.handMins.querySelector(".unitWrapper .hourBar");
 	clock.hour.percentage 	= 100 / 24;
 	clock.hour.rotateCirc 	= 360 / 12;
 
-	clock.mins.gfxH 				= clock.handHour.querySelector(".minsBar");
-	clock.mins.gfxM 				= clock.handMins.querySelector(".minsBar");
+	clock.mins.gfxH 				= clock.handHour.querySelector(".unitWrapper .minsBar");
+	clock.mins.gfxM 				= clock.handMins.querySelector(".unitWrapper .minsBar");
 	clock.mins.percentage 	= 100 / 60;
 	clock.mins.rotateCirc 	= 360 / 60;
 
-	clock.secs.gfxH 				= clock.handHour.querySelector(".secsBar");
-	clock.secs.gfxM 				= clock.handMins.querySelector(".secsBar");
+	clock.secs.gfxH 				= clock.handHour.querySelector(".unitWrapper .secsBar");
+	clock.secs.gfxM 				= clock.handMins.querySelector(".unitWrapper .secsBar");
 	clock.secs.percentage 	= 100 / 60;
 
 	enterFrame = {};
@@ -98,13 +98,23 @@ function time_check()
 	// HOUR
 	if(timeData.read.h != timeData.current.h)
 	{
-		convert_hour = Math.abs(timeData.read.h - 12);
+		if(timeData.read.h > 12)
+		{
+			convert_hour = Math.abs(timeData.read.h - 12);
+		}
+
+		else
+		{
+			convert_hour = timeData.read.h;
+		}
+
+		trace("HOUR CHECK === " + convert_hour);
 
 		clock.handHour.style.transform = "rotate(" + (convert_hour * clock.hour.rotateCirc) + "deg)";
 
 
 		clock.hour.gfxH.style.transform = "scaleY(" + (timeData.read.h * clock.hour.percentage) / 100 + ")";
-		clock.hour.gfxM.style.transform = "scaleY(" + (timeData.read.h * clock.hour.percentage) / 100+ ")";
+		clock.hour.gfxM.style.transform = "scaleY(" + (timeData.read.h * clock.hour.percentage) / 100 + ")";
 
 		timeData.current.h = timeData.read.h;
 	}
