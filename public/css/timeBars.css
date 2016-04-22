@@ -66,7 +66,7 @@ html, body
 
 	overflow: hidden;
 
-	background: radial-gradient(ellipse at center,  #8ab446 0%, #77c3a5 100%);
+	background: radial-gradient(ellipse at center,  #88cada 0%, #9fc377 100%);
 }
 
 .timeBarsH
@@ -89,11 +89,10 @@ html, body
 	width: inherit;
 	height: 30%;
 
-	/* background: rgba(7, 42, 22, 0.3); */
+	background: linear-gradient(to bottom,  rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 100%);
 
 	position: absolute;
 	transform: translateY(70%);
-	/* left:0; top: 70%; right: 0; bottom: 0; */
 }
 
 .timeBarsM
@@ -116,7 +115,7 @@ html, body
 	width: inherit;
 	height: 50%;
 
-	background: rgba(7, 42, 22, 0.3);
+	background: linear-gradient(to bottom,  rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 100%);
 
 	position: absolute;
 	left:0; top: 0; right: 0; bottom: 50%;
@@ -124,14 +123,14 @@ html, body
 
 .timeBlur-min
 {
-/* 	-webkit-filter: blur(2px);
-	filter: blur(2px); */
+	-webkit-filter: blur(2px);
+	filter: blur(2px);
 }
 
 .timeBlur-max
 {
-/* 	-webkit-filter: blur(4px);
-	filter: blur(4px); */
+	-webkit-filter: blur(4px);
+	filter: blur(4px);
 }
 
 .unitBar
