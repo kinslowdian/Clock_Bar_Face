@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>time list</title>
+	<!-- <link href='https://fonts.googleapis.com/css?family=Lato:300,700' rel='stylesheet' type='text/css'> -->
+	<link rel="stylesheet" type="text/css" href="public/css/timeBars.css">
+</head>
+
+<body onload="time_init(event);">
+
+<!-- <div class="bg fill"></div> -->
+
+<div id="display" class="fill">
+
+	<div class="timeBarsH tween">
+		<div class="secsBar unitBar tween"></div>
+		<div class="minsBar unitBar tween"></div>
+		<div class="hourBar unitBar tween"></div>
+	</div>
+
+	<div class="timeBarsM tween">
+		<div class="secsBar unitBar tween"></div>
+		<div class="minsBar unitBar tween"></div>
+		<div class="hourBar unitBar tween"></div>
+	</div>
+
+</div>
+
+<div class="preloader fill tween hack-hide">
+	<div class="cog tween"></div>
+</div>
+
+<script type="text/javascript" src="public/js/timeBars.js"></script>
+
+</body>
+
+</html>
