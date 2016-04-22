@@ -25,35 +25,6 @@ html, body
 	backface-visibility: none;
 }
 
-.preloader
-{
-	background: #a5d9c9;
-	color: #f27186;
-
-	overflow: hidden;
-
-	transition: 800ms ease-in-out;
-}
-
-.preloader .cog
-{
-	width: 240px;
-	height: 240px;
-	position: absolute;
-	left: 0; right: 0; top: 0; bottom: 0;
-	margin: auto;
-
-	background: url(../img/wheel.svg) center center no-repeat;
-
-	animation: cogFrames 800ms linear infinite;
-}
-
-@keyframes cogFrames
-{
-	0%		{transform: rotate(0deg);}
-	100%	{transform: rotate(360deg);}
-}
-
 #display
 {
 	width: 100%;
@@ -159,6 +130,32 @@ html, body
 	background: #d3e29d;
 	transition: 400ms linear;
 }
+
+.gear
+{
+	width: 240px;
+	height: 240px;
+	position: absolute;
+
+	left: 0; right: 0; bottom: -130px;
+	margin: 0 auto;
+
+	background-image: url(../img/wheel.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+
+	opacity: 0.5;
+
+	animation: gearFrames 800ms linear infinite;
+}
+
+@keyframes gearFrames
+{
+	0%		{transform: rotate(0deg);}
+	100%	{transform: rotate(360deg);}
+}
+
+
 
 
 
